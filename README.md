@@ -1,3 +1,5 @@
+Bump to v1.4.3
+
 # docker-goaccess
 This is an Alpine linux container which builds GoAccess including GeoIP.  It reverse proxies the GoAccess HTML files and websockets through nginx, allowing GoAccess content to be viewed without any other setup.
 
