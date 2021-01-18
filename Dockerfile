@@ -1,14 +1,15 @@
-FROM gregyankovoy/alpine-base
+FROM hot22shot/alpine:latest
 
 ARG build_deps="build-base ncurses-dev autoconf automake git gettext-dev libmaxminddb-dev"
 ARG runtime_deps="nginx tini ncurses libintl libmaxminddb"
+# GeoLite City Link can be obtain from https://dev.maxmind.com/geoip/geoip2/geolite2/
 ARG geolite_city_link="to be replaced by build agent"
 ARG geolite_version="to be replaced by build agent"
 
 WORKDIR /goaccess
 
 # Build goaccess with mmdb geoip
-RUN wget -q -O - https://github.com/allinurl/goaccess/archive/v1.4.tar.gz | tar --strip 1 -xzf - && \
+RUN wget -q -O - https://github.com/allinurl/goaccess/archive/v1.4.3.tar.gz | tar --strip 1 -xzf - && \
     apk add --update --no-cache ${build_deps} && \
     autoreconf -fiv && \
     ./configure --enable-utf8 --enable-geoip=mmdb && \
@@ -24,8 +25,7 @@ RUN apk add --update --no-cache ${runtime_deps} && \
 
 COPY /root /
 
-RUN chmod +x /usr/local/bin/goaccess.sh && \
-    chmod -R 777 /var/tmp/nginx
+RUN chmod +x /usr/local/bin/goaccess.sh
 
 EXPOSE 7889
 VOLUME [ "/config", "/opt/log" ]
