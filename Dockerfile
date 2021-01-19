@@ -4,7 +4,6 @@ ARG build_deps="build-base ncurses-dev autoconf automake git gettext-dev libmaxm
 ARG runtime_deps="nginx tini ncurses libintl libmaxminddb"
 # GeoLite City Link can be obtain from https://dev.maxmind.com/geoip/geoip2/geolite2/
 ARG geolite_city_link="to be replaced by build agent"
-ARG geolite_version="to be replaced by build agent"
 
 WORKDIR /goaccess
 
