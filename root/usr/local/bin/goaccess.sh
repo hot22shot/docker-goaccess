@@ -20,4 +20,4 @@ chmod -R 777 /config
 
 # ready to go
 /sbin/tini -s -- nginx -c /opt/nginx.conf
-/sbin/tini -s -- goaccess --no-global-config --config-file=/config/goaccess.conf
+/sbin/tini -s -- goaccess --persist --restore --keep-last=365 --no-global-config --config-file=/config/goaccess.conf
