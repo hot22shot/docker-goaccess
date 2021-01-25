@@ -1,5 +1,5 @@
 # Changes 
-* Bump to v1.4.3.
+* Bump to v1.4.4.
 * Basic authentification
 
 # docker-goaccess
