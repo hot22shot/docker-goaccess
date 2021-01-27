@@ -1,6 +1,7 @@
 # Changes 
 * Bump to v1.4.4.
-* Basic authentification
+* Basic authentification in the embedded nginx with .htpasswd
+* Localisation forced to fr_FR.UTF8
 
 # docker-goaccess
 This is an Alpine linux container which builds GoAccess including GeoIP.  It reverse proxies the GoAccess HTML files and websockets through nginx, allowing GoAccess content to be viewed without any other setup.
