@@ -1,12 +1,11 @@
 # Changes 
-* Bump to v1.4.4.
+* Bump to v1.4.5.
 * Basic authentification in the embedded nginx with .htpasswd, if needed you can put your own .htpasswd file by mounting it at runtime in the docker command :  
 *For docker-compose*
 ```
     volume:
       - <local path to htpasswd>\.htpasswd:\opt\.htpasswd
 ```
-
 *For docker*
 ```
 -v <local path to htpasswd>\.htpasswd:\opt\.htpasswd
