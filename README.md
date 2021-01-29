@@ -1,5 +1,6 @@
 # Changes 
 * Bump to v1.4.5.
+* Localisation forced to fr_FR.UTF8
 * Basic authentification in the embedded nginx with .htpasswd, if needed you can put your own .htpasswd file by mounting it at runtime in the docker command :  
 
 *For docker-compose*
@@ -11,7 +12,6 @@
 ```
 -v <local path to htpasswd>\.htpasswd:\opt\.htpasswd
 ```
-* Localisation forced to fr_FR.UTF8
 
 # docker-goaccess
 This is an Alpine linux container which builds GoAccess including GeoIP.  It reverse proxies the GoAccess HTML files and websockets through nginx, allowing GoAccess content to be viewed without any other setup.
